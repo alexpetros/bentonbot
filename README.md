@@ -18,6 +18,7 @@ VERIFICATION_TOKEN="yyy"
 ## TODO
 * Feedback posts to channel
 * Some form of confirmation/conversation
-* Anonymized user name
+* Anonymized user name for logs (mostly as an exercise)
 * Move away from verification tokens to Slack secret keys
+* Yes this is clearly more a job for Flask than Django cut me some slack I'm new to webdev with Python
 

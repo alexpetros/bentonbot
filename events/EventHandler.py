@@ -2,9 +2,10 @@ import os
 from slack import WebClient
 from flask import request, Response
 
+# Runtime constants
 VERIFICATION_TOKEN = os.getenv("VERIFICATION_TOKEN")
 BOT_USER_TOKEN = os.getenv("BOT_USER_TOKEN")
-FEEDBACK_CHANNEL = "anon-feedback"
+FEEDBACK_CHANNEL = os.getenv("FEEDBACK_CHANNEL")
 
 def post():
 

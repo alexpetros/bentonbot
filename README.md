@@ -9,14 +9,15 @@ To run, first export the name of the flask app in the shell with `export FLASK_A
 
 Because the environment is managed my Pipenv, you can also run `pipenv shell` to enter the pipenv interactive environment, then you don't have to preempt commands with `pipenv run`. To exit the shell, simply type `exit`.
 
+## Environmental configuration 
 The bot won't be able to respond if you don't load the necessary authentication tokens into the environment. For development, simply create a `.env` file with the appropriate keys:
 ```
 BOT_USER_TOKEN="xxx"
 VERIFICATION_TOKEN="yyy"
+FEEDBACK_CHANNEL="feedback-channel-name"
 ```
 
 ## TODO
-* Feedback posts to channel
 * Some form of confirmation/conversation
 * Anonymized user name for logs (mostly as an exercise)
 * Move away from verification tokens to Slack secret keys

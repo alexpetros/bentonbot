@@ -14,7 +14,7 @@ def get_feedback_posted_response(event_message):
     response_to_user += "\"{}\"".format(text)
 
     # Create the bot's post in the feedback channel 
-    post_to_channel = "Feedback sent in:\n"
+    post_to_channel = "`<Feedback>`\n\n"
     post_to_channel += text
     
     # Return them to be sent 

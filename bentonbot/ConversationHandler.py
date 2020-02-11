@@ -1,4 +1,5 @@
 """Determine where in the conversation the uesr is, and return the necessary responses"""
+from constants import CONFIRMATION_RESPONSE
 
 def get_conversation_response(event_message):
     return get_feedback_posted_response(event_message)
@@ -6,7 +7,6 @@ def get_conversation_response(event_message):
 def get_feedback_posted_response(event_message):
     user = event_message['user']
     text = event_message['text']
-    channel = event_message['channel']
 
     # Create the bot's response for the user
     response_to_user = "Hi <@{}> :wave:\n".format(user)
@@ -19,3 +19,10 @@ def get_feedback_posted_response(event_message):
     
     # Return them to be sent 
     return post_to_channel, response_to_user
+
+def get_confirmation_response(event_message):
+    user = event_message['user']
+    text = event_message['text']
+    response_to_user = CONFIRMATION_RESPONSE
+    response_to_user += ">{}".format(text)
+    

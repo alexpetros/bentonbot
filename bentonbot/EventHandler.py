@@ -33,7 +33,8 @@ def post():
             return { 'status':200 }
 
         # Process message, and then let the method return OK 
-        post_to_channel, response_to_user = get_conversation_response(event_message)
+        history = client.conversations_history(channel=user_dm_channel)
+        post_to_channel, response_to_user = get_conversation_response(event_message, history)
 
         # Post message in anonymous feedback channel, and tell user it was sent
         Client = WebClient(BOT_USER_TOKEN)

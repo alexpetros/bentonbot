@@ -1,6 +1,7 @@
 from flask import Flask
-from events import EventHandler 
 from dotenv import load_dotenv
+
+from bentonbot import EventHandler 
 
 app = Flask(__name__)
 

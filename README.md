@@ -22,3 +22,4 @@ FEEDBACK_CHANNEL="feedback-channel-name"
 * Anonymized user name for logs (mostly as an exercise)
 * Move away from verification tokens to Slack secret keys
 * Wrap the shell export and run into a single command
+* Check that no duplicates were sent to the user or the channel

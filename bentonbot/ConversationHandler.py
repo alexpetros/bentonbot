@@ -1,7 +1,8 @@
 """Determine where in the conversation the uesr is, and return the necessary responses"""
-from constants import CONFIRMATION_RESPONSE
+from .constants import CONFIRMATION_RESPONSE
 
-def get_conversation_response(event_message):
+# TODO: parse history to enable confirmation
+def get_conversation_response(event_message, history):
     return get_feedback_posted_response(event_message)
 
 def get_feedback_posted_response(event_message):
@@ -9,8 +10,7 @@ def get_feedback_posted_response(event_message):
     text = event_message['text']
 
     # Create the bot's response for the user
-    response_to_user = "Hi <@{}> :wave:\n".format(user)
-    response_to_user += "I just send the following message to the directors:\n"
+    response_to_user = "Hi <@{}>! I just sent the following message to the directors:\n".format(user)
     response_to_user += "\"{}\"".format(text)
 
     # Create the bot's post in the feedback channel 
